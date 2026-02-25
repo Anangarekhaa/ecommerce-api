@@ -1,0 +1,248 @@
+.orders-container {
+  padding: 20px 0;
+}
+
+.orders-container h1 {
+  margin-bottom: 30px;
+  color: var(--text-color);
+  text-align: center;
+  font-size: 32px;
+}
+
+.admin-toggle {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+.admin-toggle button {
+  background-color: #ecf0f1;
+  color: var(--text-color);
+  padding: 10px 20px;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.admin-toggle button.active {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.admin-toggle button:hover {
+  border-color: var(--primary-color);
+}
+
+.empty-message {
+  background: white;
+  padding: 60px 40px;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.empty-message p {
+  margin-bottom: 20px;
+  color: var(--text-color);
+  font-size: 18px;
+}
+
+.btn-shop {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-shop:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.loading {
+  text-align: center;
+  padding: 60px 20px;
+  font-size: 18px;
+  color: var(--text-color);
+}
+
+.error-message {
+  background-color: #fadbd8;
+  color: #c0392b;
+  padding: 15px 20px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  border-left: 4px solid var(--danger-color);
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.order-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.order-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.order-header {
+  background: linear-gradient(135deg, #34495e, #2c3e50);
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.order-info h3 {
+  margin: 0 0 10px 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.order-date {
+  margin: 0;
+  opacity: 0.9;
+  font-size: 14px;
+}
+
+.order-status {
+  display: flex;
+  align-items: center;
+}
+
+.status-select {
+  padding: 8px 12px;
+  border: 1px solid white;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.status-select:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.status-select option {
+  background-color: #2c3e50;
+  color: white;
+}
+
+.status-badge {
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.status-badge.pending {
+  background-color: #f39c12;
+}
+
+.status-badge.processing {
+  background-color: #3498db;
+}
+
+.status-badge.shipped {
+  background-color: #9b59b6;
+}
+
+.status-badge.delivered {
+  background-color: #2ecc71;
+}
+
+.status-badge.cancelled {
+  background-color: #e74c3c;
+}
+
+.order-items {
+  padding: 20px;
+  background: #f8f9fa;
+}
+
+.order-items h4 {
+  margin: 0 0 15px 0;
+  font-size: 16px;
+  color: var(--text-color);
+}
+
+.order-items table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.order-items thead {
+  background-color: #ecf0f1;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.order-items th {
+  padding: 12px;
+  text-align: left;
+  font-weight: 700;
+  color: var(--text-color);
+  font-size: 14px;
+}
+
+.order-items td {
+  padding: 12px;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 14px;
+}
+
+.order-items tbody tr:last-child td {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .orders-container h1 {
+    font-size: 24px;
+  }
+
+  .order-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .order-status {
+    width: 100%;
+  }
+
+  .status-select {
+    width: 100%;
+  }
+
+  .order-items table {
+    font-size: 12px;
+  }
+
+  .order-items th, .order-items td {
+    padding: 8px;
+  }
+}
